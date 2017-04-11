@@ -1,4 +1,10 @@
 {
+    "name": "pjkober/mytest1",
+    "type": "symfony-bundle",
+    "description": "test",
+    "keywords": ["test","phpunit"],
+    "license": "MIT",
+    
     "require": {
     },
     "require-dev": {
