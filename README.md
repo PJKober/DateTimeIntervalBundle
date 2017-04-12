@@ -1,9 +1,11 @@
 # DateTimeIntervalBundle
-PHP and TWIG functions to convert and show interval for date and datetime data.
+PHP and TWIG functions & filters to convert dates interval to number: secounds, minutes, hours, days.
+Example usage in TWIG: {{ your_date **|days** }} if your_date = yesterday the result is -1.
 
 [![Build Status](https://travis-ci.org/PJKober/DateTimeIntervalBundle.svg?branch=master)](https://travis-ci.org/PJKober/DateTimeIntervalBundle)
 [![Total Downloads](https://poser.pugx.org/PJKober/DateTimeIntervalBundle/downloads.svg)](https://packagist.org/packages/PJKober/DateTimeIntervalBundle) 
-[![Latest Stable Version](https://poser.pugx.org/PJKober/DateTimeIntervalBundle/v/stable.svg)](https://packagist.org/packages/PJKober/DateTimeIntervalBundle)
+
+[![Latest Version][badge-release]][release]
 
 
 # INSTALLATION & CONFIGURATION
@@ -50,20 +52,55 @@ services:
 
 ```php
 <?php
-// Use the helper with Php
-echo $view['time']-> **dateToDays($dateTime)**; // returns something like "10", count interval between $dateTime and now
-echo $view['time']-> **dateToDays($dateTime1, $dateTime1)**; // returns something like "10", count interval between $dateTime1 and  $dateTime2
+// Use the functions with PHP
+echo $view['time']->dateToDays($dateTime); 
+// returns something like "10" or "-10", count days interval between $dateTime and now
+
+echo $view['time']->dateToDays($dateTime1, $dateTime1); 
+// count days interval between $dateTime1 and  $dateTime2
+
+echo $view['time']->dateToHours($dateTime); 
+// returns something like "24" or "-36", count interval between $dateTime and now
+echo $view['time']->dateToHours($dateTime1, $dateTime1); 
+// count hours interval between $dateTime1 and  $dateTime2
+
+echo $view['time']->dateToMinutes($dateTime); 
+// returns something like "1140" or "-1140" minutunt interval between $dateTime and now
+echo $view['time']->dateToMinutes($dateTime1, $dateTime1); 
+// count minutes interval between $dateTime1 and  $dateTime2
+
+echo $view['time']->dateToSeconds($dateTime); 
+// returns something like "1140" or "-1140", count interval between $dateTime and now
+echo $view['time']-> dateToSeconds($dateTime1, $dateTime1); 
+// count Seconds interval between $dateTime1 and  $dateTime2
+
 ```
 
 
 ### In Twig!
 
 ``` php
-{{ someDateTimeVariable**|days** }}
-//... or use the equivalent function
-{{ dateToDays(someDateTimeVariable) }}
-//... or
-{{ dateToDays(someDateTimeVariable1, someDateTimeVariable2) }}
+{{ someDateTime |days }}
+{{ someDateTime |hours }}
+{{ someDateTime |minutes }}
+{{ someDateTime |ceconds }}
+
+
+//... or use the equivalent function. Secound date is now
+{{ dateToDays( date() | date_modify("-1 day")) }}   = 1 
+{{ dateToHours( date() | date_modify("-1 day")) }}  = 24
+{{ dateToMinutes( date() | date_modify("-1 day")) }}  = 1140
+{{ dateToSeconds( date() | date_modify("-1 day")) }}  = 86400
+
+//... or put two dates
+ {{ dateToDays( fromDate ,  toDate ) }}
+{{ dateToDays( fromDateTime ,  toDateTime ) }}
+{{ dateToHours( fromDate ,  toDate ) }}
+{{ dateToHours( fromDateTime ,  toDateTime ) }}
+{{ dateToMinutes( fromDate ,  toDate ) }}
+{{ dateToMinutes( fromDateTime ,  toDateTime ) }}
+{{ dateToSeconds( fromDate ,  toDate ) }}
+{{ dateToSeconds( fromDateTime ,  toDateTime ) }}
 ```
 
 ## TESTS [x]
@@ -76,4 +113,16 @@ If you want to run tests, please check that you have installed dev dependencies.
 ## License
 
 The MIT License (MIT). Please see [License File](./LICENSE) for more information.
-
+[badge-build]: https://img.shields.io/travis/PJKober/DateTimeIntervalBundle/master.svg?style=flat-square
+[badge-coverage]: https://img.shields.io/coverallsPJKober/DateTimeIntervalBundle/master.svg?style=flat-square
+[badge-downloads]: https://img.shields.io/packagist/dt/PJKober/DateTimeIntervalBundle.svg?style=flat-square
+[badge-release]: https://img.shields.io/github/release/PJKober/DateTimeIntervalBundle.svg?style=flat-square
+[badge-source]: http://img.shields.io/badge/source-pjkober/date-time-interval-bundle.svg?style=flat-square
+[build]: https://travis-ci.org/PJKober/DateTimeIntervalBundle
+[conduct]: https://github.com/PJKober/DateTimeIntervalBundle/blob/master/CODE_OF_CONDUCT.md
+[contributing]: https://github.com/PJKober/DateTimeIntervalBundle/blob/master/CONTRIBUTING.md
+[coverage]: https://coveralls.io/r/PJKober/DateTimeIntervalBundle?branch=master
+[downloads]: https://packagist.org/packages/PJKober/DateTimeIntervalBundle
+[license]: https://github.com/PJKober/DateTimeIntervalBundle/blob/master/LICENSE
+[release]: https://github.com/PJKober/DateTimeIntervalBundle/releases
+[source]: https://github.com/PJKober/DateTimeIntervalBundle
