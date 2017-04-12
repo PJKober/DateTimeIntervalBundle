@@ -10,7 +10,7 @@ PHP and TWIG functions to convert and show interval for date and datetime data.
 
 ## INSTALLATION via Composer
 ```
-    composer require pjkober/datetimeintervalbundle
+composer require pjkober/datetimeintervalbundle
 ```
 	
 ## CONFIGURATION
@@ -71,7 +71,7 @@ echo $view['time']->dateToDays($dateTime1, $dateTime1); // returns something lik
 If you want to run tests, please check that you have installed dev dependencies.
 
 ```bash
-./vendor/bin/phpunit
+./vendor/bin/simple-phpunit
 ```
 ## License
 
