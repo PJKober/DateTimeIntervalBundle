@@ -13,7 +13,10 @@
     },
     "autoload": {
         "psr-0": {
-            "tests": ""
-        }
+            "/Tests/": ""
+        },
+		"exclude-from-classmap": [
+            "/Tests/"
+		]
     }
 }
