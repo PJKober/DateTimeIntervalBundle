@@ -4,6 +4,7 @@ Example usage in TWIG: {{ your_date **|days** }} if your_date = yesterday the re
 
 [![Latest Version][badge-release]][release]
 [![Build Status][badge-build]][build]
+[![Total Downloads](https://poser.pugx.org/PJKober/DateTimeIntervalBundle/downloads.svg)](https://packagist.org/packages/PJKober/DateTimeIntervalBundle) 
 
 # INSTALLATION & CONFIGURATION
 
