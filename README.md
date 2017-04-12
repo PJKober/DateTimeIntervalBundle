@@ -1,6 +1,12 @@
 # mytest2a
-[![Build Status](https://travis-ci.org/pjkober/mytest2a.svg?branch=master)](https://travis-ci.org/pjkober/mytest2a)
-[![Total Downloads](https://poser.pugx.org/pjkober/mytest2a/downloads.svg)](https://packagist.org/packages/pjkober/mytest2a) 
-[![Latest Stable Version](https://poser.pugx.org/pjkober/mytest2a/v/stable.svg)](https://packagist.org/packages/pjkober/mytest2a)
+[![Build Status](https://travis-ci.org/PJKober/DateTimeIntervalBundle
+.svg?branch=master)](https://travis-ci.org/PJKober/DateTimeIntervalBundle
+)
+[![Total Downloads](https://poser.pugx.org/PJKober/DateTimeIntervalBundle
+/downloads.svg)](https://packagist.org/packages/PJKober/DateTimeIntervalBundle
+) 
+[![Latest Stable Version](https://poser.pugx.org/PJKober/DateTimeIntervalBundle
+/v/stable.svg)](https://packagist.org/packages/PJKober/DateTimeIntervalBundle
+)
 
 # Info
