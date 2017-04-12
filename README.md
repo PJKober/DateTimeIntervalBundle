@@ -51,22 +51,22 @@ services:
 ```php
 <?php
 // Use the helper with Php
-echo $view['time']->dateToDays($dateTime); // returns something like "10", count interval between $dateTime and now
-echo $view['time']->dateToDays($dateTime1, $dateTime1); // returns something like "10", count interval between $dateTime1 and  $dateTime2
+echo $view['time']-> **dateToDays($dateTime)**; // returns something like "10", count interval between $dateTime and now
+echo $view['time']-> **dateToDays($dateTime1, $dateTime1)**; // returns something like "10", count interval between $dateTime1 and  $dateTime2
 ```
 
 
 ### In Twig!
 
 ``` php
-{{ someDateTimeVariable|days }}
+{{ someDateTimeVariable**|days** }}
 //... or use the equivalent function
 {{ dateToDays(someDateTimeVariable) }}
 //... or
 {{ dateToDays(someDateTimeVariable1, someDateTimeVariable2) }}
 ```
 
-## TESTS
+## TESTS [x]
 
 If you want to run tests, please check that you have installed dev dependencies.
 
