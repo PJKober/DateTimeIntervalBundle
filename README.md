@@ -4,8 +4,6 @@ Example usage in TWIG: {{ your_date **|days** }} if your_date = yesterday the re
 
 [![Latest Version][badge-release]][release]
 [![Build Status][badge-build]][build]
-[![Coverage Status][badge-coverage]][coverage]
-[![Total Downloads][badge-downloads]][downloads]
 
 # INSTALLATION & CONFIGURATION
 
