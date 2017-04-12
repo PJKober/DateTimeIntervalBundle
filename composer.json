@@ -1,11 +1,12 @@
 {
-    "name": "pjkober/mytest2a",
+    "name": "pjkober/datetimeintervalbundle",
     "type": "symfony-bundle",
-    "description": "test",
+    "description": "Symfony PJKoberDateTimeIntervalBundle",
     "keywords": ["test","phpunit"],
     "license": "MIT",
     
     "require": {
+        "php": "^5.5.9 || ^7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7.11"
