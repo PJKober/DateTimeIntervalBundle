@@ -2,11 +2,10 @@
 PHP and TWIG functions & filters to convert dates interval to number: secounds, minutes, hours, days.
 Example usage in TWIG: {{ your_date **|days** }} if your_date = yesterday the result is -1.
 
-[![Build Status](https://travis-ci.org/PJKober/DateTimeIntervalBundle.svg?branch=master)](https://travis-ci.org/PJKober/DateTimeIntervalBundle)
-[![Total Downloads](https://poser.pugx.org/PJKober/DateTimeIntervalBundle/downloads.svg)](https://packagist.org/packages/PJKober/DateTimeIntervalBundle) 
-
 [![Latest Version][badge-release]][release]
-
+[![Build Status][badge-build]][build]
+[![Coverage Status][badge-coverage]][coverage]
+[![Total Downloads][badge-downloads]][downloads]
 
 # INSTALLATION & CONFIGURATION
 
@@ -113,16 +112,17 @@ If you want to run tests, please check that you have installed dev dependencies.
 ## License
 
 The MIT License (MIT). Please see [License File](./LICENSE) for more information.
+
+
 [badge-build]: https://img.shields.io/travis/PJKober/DateTimeIntervalBundle/master.svg?style=flat-square
 [badge-coverage]: https://img.shields.io/coverallsPJKober/DateTimeIntervalBundle/master.svg?style=flat-square
 [badge-downloads]: https://img.shields.io/packagist/dt/PJKober/DateTimeIntervalBundle.svg?style=flat-square
 [badge-release]: https://img.shields.io/github/release/PJKober/DateTimeIntervalBundle.svg?style=flat-square
-[badge-source]: http://img.shields.io/badge/source-pjkober/date-time-interval-bundle.svg?style=flat-square
+[badge-source]: http://img.shields.io/badge/source-PJKober/DateTimeIntervalBundle.svg?style=flat-square
 [build]: https://travis-ci.org/PJKober/DateTimeIntervalBundle
 [conduct]: https://github.com/PJKober/DateTimeIntervalBundle/blob/master/CODE_OF_CONDUCT.md
 [contributing]: https://github.com/PJKober/DateTimeIntervalBundle/blob/master/CONTRIBUTING.md
 [coverage]: https://coveralls.io/r/PJKober/DateTimeIntervalBundle?branch=master
 [downloads]: https://packagist.org/packages/PJKober/DateTimeIntervalBundle
-[license]: https://github.com/PJKober/DateTimeIntervalBundle/blob/master/LICENSE
 [release]: https://github.com/PJKober/DateTimeIntervalBundle/releases
 [source]: https://github.com/PJKober/DateTimeIntervalBundle
