@@ -24,7 +24,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new pjkober\datetimeintervalbundle\EinsteDateTimeIntervalBundle(),
+        new pjkober\datetimeintervalbundle\PJKoberDateTimeIntervalBundle(),
     );
     // ...
 }
@@ -36,10 +36,10 @@ Enable the Service component configuration:
 # app/config/services.yml
 services:
    date_time_interval_twig_extension:
-            class: pjkober\datetimeintervalbundle\Twig\TwigFunctionExtension
-            public: false
-            tags:
-                - { name: twig.extension }
+     class: pjkober\datetimeintervalbundle\Twig\TwigFunctionExtension
+     public: false
+     tags:
+         - { name: twig.extension }
 
 ```
 
@@ -78,10 +78,10 @@ echo $view['time']-> dateToSeconds($dateTime1, $dateTime1);
 ### In Twig!
 
 ``` php
-{{ someDateTime |days }}
-{{ someDateTime |hours }}
-{{ someDateTime |minutes }}
-{{ someDateTime |ceconds }}
+{{ someDateTime | days }}
+{{ someDateTime | hours }}
+{{ someDateTime | minutes }}
+{{ someDateTime | seconds }}
 
 
 //... or use the equivalent function. Secound date is now
@@ -91,7 +91,7 @@ echo $view['time']-> dateToSeconds($dateTime1, $dateTime1);
 {{ dateToSeconds( date() | date_modify("-1 day")) }}  = 86400
 
 //... or put two dates
- {{ dateToDays( fromDate ,  toDate ) }}
+{{ dateToDays( fromDate ,  toDate ) }}
 {{ dateToDays( fromDateTime ,  toDateTime ) }}
 {{ dateToHours( fromDate ,  toDate ) }}
 {{ dateToHours( fromDateTime ,  toDateTime ) }}
